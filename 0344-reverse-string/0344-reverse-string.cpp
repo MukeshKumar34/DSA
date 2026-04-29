@@ -8,8 +8,8 @@ public:
         int i=0;
         while(!st.empty()){
             s[i] = st.top();
-            i++;
             st.pop();
+            i++;
         }
     }
 };
