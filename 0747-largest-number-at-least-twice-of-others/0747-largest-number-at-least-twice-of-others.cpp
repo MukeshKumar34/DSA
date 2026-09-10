@@ -10,7 +10,7 @@ public:
             maxindex =i;
         }
      }
-
+     
        for(int i=0;i<nums.size();i++){
         if(i != maxindex && max < 2*nums[i]){
             return -1;
