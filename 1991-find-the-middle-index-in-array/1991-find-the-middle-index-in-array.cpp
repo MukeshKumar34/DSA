@@ -1,0 +1,23 @@
+class Solution {
+public:
+    int findMiddleIndex(vector<int>& nums) {
+        int totalsum=0;
+        for(int i=0;i<=nums.size()-1;i++){
+            totalsum+=nums[i];
+
+        }
+
+
+int leftsum = 0;
+        for(int i=0;i<nums.size();i++){
+        int rightsum = totalsum - leftsum - nums[i];
+        if(leftsum == rightsum){
+            return i;
+        }
+        else{
+           leftsum += nums[i];
+        }
+        }
+        return -1;
+    }
+};
